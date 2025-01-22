@@ -1,0 +1,701 @@
+/* phpcs:ignoreFile */
+/* For Reports/Dashboard and tab switching */
+.nav-tab-wrapper {
+	border-bottom: 1px solid #ccc;
+	padding-top: 9px;
+	padding-bottom: 0;
+	line-height: inherit;
+}
+.nav-tab-wrapper:not(.wp-clearfix):after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.nav-tab {
+	float: left;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	margin-left: 0.5em;
+	padding: 5px 10px;
+	line-height: 2em;
+	font-weight: 600;
+	background: transparent;
+	color: #555555a8;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+.nav-tab-active {
+	margin-bottom: -1px;
+	color: #444;
+}
+.nav-tab-active,
+.nav-tab:focus:active {
+	box-shadow: none;
+}
+.nav-tab-active,
+.nav-tab-active:hover,
+.nav-tab-active:focus,
+.nav-tab-active:focus:active {
+	border-bottom: 2px solid #008080;
+	background: transparent;
+	color: #008080;
+}
+#afwc_kpis_container {
+	display: inline-block;
+}
+#afwc_kpis_container .afwc_kpis_inner_container {
+	display: inline-block;
+	margin: 1em 0 2em 0;
+}
+#afwc_load_more_products,
+#afwc_load_more_referrals,
+#afwc_load_more_payouts {
+	cursor: pointer;
+}
+#afwc_load_more_products.disabled,
+#afwc_load_more_referrals.disabled,
+#afwc_load_more_payouts.disabled {
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+}
+tbody {
+	height: auto;
+	max-height: 20em;
+	overflow-y: auto;
+	display: block;
+	width: 100%
+}
+thead,
+tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+.afwc_circle {
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.afwc_products thead th:last-child,
+.afwc_products tbody td:last-child,
+.afwc_referrals thead th:nth-last-child(2),
+.afwc_referrals tbody td:nth-last-child(2) {
+	text-align: right;
+}
+@media only screen and (min-width: 760px) {
+	.afwc_referrals thead th:nth-child(1),
+	.afwc_referrals tbody td:nth-child(1) {
+		width: 15%;
+	}
+	.afwc_referrals thead th:nth-child(2),
+	.afwc_referrals tbody td:nth-child(2) {
+		width: 25%;
+	}
+	.afwc_referrals thead th:nth-child(3),
+	.afwc_referrals tbody td:nth-child(3) {
+		width: 20%;
+	}
+	.afwc_referrals thead th:nth-child(4),
+	.afwc_referrals tbody td:nth-child(4) {
+		width: 20%;
+	}
+	.afwc_referrals thead th:nth-child(5),
+	.afwc_referrals tbody td:nth-child(5) {
+		width: 20%;
+	}
+	.afwc_referrals thead th:nth-child(6),
+	.afwc_referrals tbody td:nth-child(6) {
+		width: 20%;
+	}
+	.afwc_payout_history thead th:nth-child(1),
+	.afwc_payout_history tbody td:nth-child(1) {
+		width: 30%;
+	}
+	.afwc_payout_history thead th:nth-child(2),
+	.afwc_payout_history tbody td:nth-child(2) {
+		width: 25%;
+	}
+	.afwc_payout_history thead th:nth-child(3),
+	.afwc_payout_history tbody td:nth-child(3) {
+		width: 20%;
+	}
+	.afwc_payout_history thead th:nth-child(4),
+	.afwc_payout_history tbody td:nth-child(4) {
+		width: 25%;
+	}
+	.afwc_products thead th:nth-child(1),
+	.afwc_products tbody td:nth-child(1) {
+		width: 55%;
+	}
+	.afwc_products thead th:nth-child(2),
+	.afwc_products tbody td:nth-child(2) {
+		width: 20%;
+		text-align: right;
+	}
+	.afwc_products thead th:nth-child(3),
+	.afwc_products tbody td:nth-child(3) {
+		width: 25%;
+	}
+}
+@media only screen and (max-width: 760px) {
+	#afwc_commission_lbl,
+	#afwc_commission_container {
+		width: 100% !important;
+	}
+	.afwc_circle {
+		margin-top: 0.3em;
+		margin-right: 0;
+	}
+}
+.afwc_products tfoot td,
+.afwc_referrals tfoot td,
+.afwc_payout_history tfoot td {
+	text-align: right;
+}
+.afwc_kpi {
+	float: left;
+	min-width: 11.5em;
+	width: 32.5%;
+	height: 4em;
+	border: 0.1em solid #e8e8e8;
+	background-color: #FFFFFF;
+	position: relative;
+	display: inline-block;
+	margin: 2px !important;
+}
+.afwc_kpis_icon_container {
+	width: 100%;
+	height: 80%;
+	border-right: 1px solid #ededed;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.flex_center {
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+.container_parent_left {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.container_parent_right {
+	height: 80%;
+	width: 90%;
+	margin: 0 auto;
+}
+.afwc_kpis_icon {
+	margin: 0 auto;
+	color: #4083D8;
+	height: 1.5em;
+	font-size: 1.5em !important;
+	line-height: 1.5em !important;
+}
+.afwc_kpis_icon_dashboard_font_size {
+	font-size: 1.6em;
+}
+.afwc_kpis_data {
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+.afwc_kpis_text {
+	color: #555558;
+	font-weight: 500;
+	font-size: 0.8em;
+}
+.afwc_kpis_price {
+	font-size: 1em;
+	color: #4083D8;
+	font-weight: 500;
+}
+.afwc_kpis_number {
+	color: #4083D8;
+	font-weight: 500;
+}
+.afwc_kpis_price_dashboard_font_size {
+	font-size: 2em;
+	line-height: 0.9em;
+}
+.afwc_kpi_last {
+	margin-right: 0em;
+}
+#afwc_commission_bar .fill_green {
+	background-color: #11AC1E;
+}
+#afwc_commission_bar .fill_orange {
+	background-color: #F1693B;
+}
+.afwc_referrals .text_green {
+	color: #11AC1E;
+	font-weight: 600;
+}
+.afwc_referrals .text_orange {
+	color: #F1693B;
+	font-weight: 600;
+}
+.afwc_referrals .text_red {
+	color: #F41F1F;
+}
+.afwc_referrals .text_gray {
+	color: #535353;
+}
+#afwc_kpi_gross_commission .afwc_kpis_price,
+#afwc_kpi_gross_commission .afwc_kpis_number {
+	color: #09616D;
+}
+#afwc_kpi_gross_commission .fas {
+	color: #12A2B5;
+}
+#afwc_kpi_gross_commission:hover {
+	border-color: #12A2B5 !important;
+}
+#afwc_kpi_refunds .afwc_kpis_price,
+#afwc_kpi_refunds .afwc_kpis_number {
+	color: #AA0808;
+}
+#afwc_kpi_refunds .fas {
+	color: #F41F1F;
+}
+#afwc_kpi_refunds:hover {
+	border-color: #F41F1F !important;
+}
+#afwc_kpi_net_commission .afwc_kpis_price,
+#afwc_kpi_net_commission .afwc_kpis_number,
+#afwc_commission_stats_paid {
+	color: #075F0E;
+}
+#afwc_kpi_net_commission .fas {
+	color: #11A71D;
+}
+#afwc_kpi_net_commission:hover {
+	border-color: #11A71D !important;
+}
+#afwc_kpi_sales .afwc_kpis_price,
+#afwc_kpi_sales .afwc_kpis_number {
+	color: #6D533C;
+}
+#afwc_kpi_sales .fas {
+	color: #AF8F6E;
+}
+#afwc_kpi_sales:hover {
+	border-color: #AF8F6E !important;
+}
+#afwc_kpi_clicks .afwc_kpis_price,
+#afwc_kpi_clicks .afwc_kpis_number,
+#afwc_commission_stats_unpaid {
+	color: #992E0B;
+}
+#afwc_kpi_clicks .fas {
+	color: #F1693B;
+}
+#afwc_kpi_clicks:hover {
+	border-color: #F1693B !important;
+}
+#afwc_kpi_conversion .afwc_kpis_price,
+#afwc_kpi_conversion .afwc_kpis_number {
+	color: #7B5009;
+}
+#afwc_kpi_conversion .fas {
+	color: #CD840E;
+}
+#afwc_kpi_conversion:hover {
+	border-color: #CD840E !important;
+}
+#afwc_commission {
+	margin: 1em 0 0 0.1em;
+	min-height: 3em;
+}
+#afwc_commission_container {
+	float: right;
+	margin-top: 0.6em;
+	width: 70%;
+}
+#afwc_commission_stats div {
+	width: auto !important;
+	font-size: 0.9em !important;
+}
+#afwc_commission_bar {
+	width: 100%;
+	background: #11A71D;
+	border-radius: 2.5em;
+	height: 0.5em;
+	float: left;
+	overflow: hidden;
+}
+#afwc_commission_bar div {
+	border-radius: inherit;
+	height: 100%;
+}
+#afwc_top_row_container {
+	margin-top: 1em;
+}
+#afwc_paid_commission {
+	border-radius: 2.5em 0 0 2.5em;
+}
+#afwc_unpaid_commission {
+	border-radius: 0 2.5em 2.5em 0;
+}
+/* Datepicker Style Start */
+#afwc_date_range_container {
+	margin: 0.5em 0.2em 1.5em 70%;
+	float: right;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	background-color: #FFFFFF;
+	color: #374151;
+	font-size: 0.875rem;
+	line-height: 0.25rem;
+	border: 0.125rem solid #9CA3AF;
+	border-radius: 0.375rem;
+}
+#afwc_from,
+#afwc_to {
+	outline: 0;
+	border: 0;
+	width: max-content;
+	text-align: center;
+	box-shadow: unset;
+	box-sizing: unset;
+	background-color: unset;
+	cursor: pointer;
+	height: unset;
+	padding: 0.25rem 0.5rem;
+	line-height: 1rem;
+	background-color: transparent;
+	border-color: transparent;
+	cursor: pointer;
+}
+#afwc_date_range_container_wrapper {
+	margin: 0.5em 0 1.5em 33.1em;
+	float: right;
+}
+div#afwc-smart-dates-dropdown-wrapper {
+	border-color: #D1D5DB;
+	border-left-style: solid;
+	border-left-width: 0.0625rem;
+	line-height: 0.25rem;
+	z-index: 1;
+}
+#afwc-smart-dates-dropdown-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	color: #6B7280;
+	cursor: pointer;
+}
+#afwc-smart-dates-dropdown-icon:focus {
+	outline: 0.125rem solid transparent;
+	outline-offset: 0.125rem;
+}
+#afwc_from:focus,
+#afwc_to:focus {
+	outline: 0.125rem solid transparent;
+	outline-offset: 0.125rem;
+	box-shadow: 0 0 #0000;
+}
+@media screen and (min-width: 640px) {
+	#afwc_from,
+	#afwc_to {
+		line-height: 1.25rem;
+	}
+}
+#afwc-smart-dates-dropdown-list li:not(.afwc-separator) {
+	padding: 0.25rem 1rem;
+}
+#afwc-smart-dates-dropdown-list li:not(.afwc-separator):hover {
+	background-color: #E5E7EB;
+}
+#afwc_dashboard_wrapper #afwc_date_range_container ul#afwc-smart-dates-dropdown-list li.afwc-separator {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	height: 0.0625rem;
+	background-color: #E5E7EB;
+}
+#afwc-smart-dates-dropdown-list {
+	position: absolute;
+	width: max-content;
+	text-align: left;
+	background-color: #FFFFFF;
+	border: 1px solid #E5E7EB;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.625rem 0.938rem -0.188rem rgb(0 0 0 / 0.1), 0 0.25rem 0.375rem -0.25rem rgb(0 0 0 / 0.1);
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-left: -5.0rem;
+	margin-top: 0.3rem;
+	padding-left: 0rem;
+	cursor: pointer;
+	list-style-type: none !important;
+	line-height: 1.25rem;
+}
+#afwc-smart-dates-dropdown-wrapper .afwc-hidden {
+	display: none;
+}
+#afwc_from::-webkit-inner-spin-button,
+#afwc_from::-webkit-calendar-picker-indicator,
+#afwc_to::-webkit-inner-spin-button,
+#afwc_to::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}
+/* Datepicker Style End */
+#afwc_commission .afwc_kpis_text {
+	font-size: 1em;
+	float: left;
+	width: 25%;
+}
+#afwc_commission_stats_unpaid {
+	float: right !important;
+	width: auto !important;
+}
+#afwc_paid_commission,
+#afwc_unpaid_commission {
+	float: left;
+	text-align: center;
+	color: white;
+	font-weight: 600;
+}
+/* Scrollbar */
+#afwc_dashboard_wrapper ::-webkit-scrollbar {
+	width: 0.7em;
+	height: 0.95em;
+}
+#afwc_dashboard_wrapper ::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	border-radius: 10px;
+	background-color: #fff
+}
+#afwc_dashboard_wrapper ::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: rgba(0, 0, 0, .1)
+}
+#afwc_dashboard_wrapper .afwc-table-header {
+	font-size: 1.3em;
+	padding: 0.4em 0;
+	font-weight: 600;
+}
+#afwc_dashboard_wrapper .empty-table {
+	text-align: center;
+}
+/* New CSS For My Account, Start */
+.afwc-affiliate-details-card-wrapper .afwc-affiliate-details-card {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	padding: 1rem 1.5rem;
+	background: #b5dada;
+	border-radius: 0.5rem;
+}
+.afwc-affiliate-details-card-wrapper h3.afwc-display-name {
+	margin: 0;
+	font-weight: 700;
+}
+.afwc-affiliate-details-card-wrapper img.afwc-avatar-img {
+	border-radius: 50%;
+}
+.afwc-affiliate-details-card-wrapper .afwc-detail-title {
+	font-weight: 600;
+	margin-right: 0.25rem;
+}
+.afwc-affiliate-details-card-wrapper .afwc-click-to-copy.afwc-affiliate-ref-url-label:hover {
+	cursor: pointer;
+}
+#afwc_top_row_container.afwc-top-row-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+#afwc_top_row_container.afwc-top-row-wrapper .afwc-report-heading-container {
+	display: flex;
+	align-items: center;
+	align-self: flex-start;
+	gap: 0.75rem;
+	margin-left: 0.5rem;
+}
+#afwc_top_row_container.afwc-top-row-wrapper .afwc-report-heading-container .afwc-report-heading {
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+#afwc_top_row_container.afwc-top-row-wrapper .afwc-report-heading-container .afwc-back-button-wrapper,
+.afwc-reports tfoot .afwc-back-button-wrapper {
+	display: flex;
+	gap: 0.15rem;
+	text-align: left;
+}
+#afwc_top_row_container.afwc-top-row-wrapper .afwc-report-heading-container .afwc-back-button-wrapper:hover,
+.afwc-reports tfoot .afwc-back-button-wrapper:hover {
+	cursor: pointer;
+}
+#afwc_top_row_container.afwc-top-row-wrapper .afwc-report-heading-container .afwc-back-button-wrapper svg,
+.afwc-reports tfoot .afwc-back-button-wrapper svg {
+	width: 1rem;
+}
+#afwc_top_row_container.afwc-top-row-wrapper .afwc-report-heading-container .afwc-back-button-wrapper span,
+.afwc-reports tfoot .afwc-back-button-wrapper span {
+	font-size: 1rem;
+}
+#afwc_top_row_container.afwc-top-row-wrapper #afwc_date_range_container {
+	float: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: 0;
+	width: fit-content;
+	height: fit-content;
+	border-color: #ccc;
+}
+#afwc_top_row_container.afwc-top-row-wrapper #afwc_date_range_container>div:nth-child(2) {
+	color: #555555a8;
+}
+#afwc_top_row_container.afwc-top-row-wrapper #afwc-smart-dates-dropdown-list {
+	margin-bottom: 0;
+	margin-left: -5.15rem;
+}
+#afwc_kpi_section_wrapper {
+	display: grid;
+	gap: 2rem;
+	margin: 0 0 1.5rem 0;
+}
+#afwc_kpi_section_wrapper .afwc-kpi-row {
+	display: flex;
+	flex-direction: row;
+}
+#afwc_kpi_section_wrapper .afwc-kpi-row svg.afwc-kpi-separator {
+	width: 0.75rem;
+}
+#afwc_kpi_section_wrapper .afwc-kpi-row svg.afwc-kpi-separator path {
+	fill: #9ca3afa3;
+}
+#afwc_kpi_section_wrapper .afwc-kpi-row .afwc-kpi-box {
+	flex: 1;
+	text-align: center;
+	align-self: center;
+	padding: 0 0.5rem;
+}
+#afwc_kpi_section_wrapper .afwc-kpi-row .afwc-kpi-box .afwc-kpi-number {
+	font-size: 1.5rem;
+	color: #1F2937;
+	font-weight: 500;
+}
+#afwc_kpi_section_wrapper .afwc-kpi-row .afwc-kpi-box .afwc-kpi-title {
+	font-size: 1.25rem;
+	margin-top: 0.25rem;
+	color: #9CA3AF;
+}
+.afwc-table-header-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.afwc-table-header-wrapper .afwc-view-all-reports {
+	font-size: 1rem;
+	font-weight: 600;
+}
+.afwc-reports .afwc-table-footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.afwc-reports .afwc-table-footer-container img.afwc-table-loader {
+	height: 1.5rem;
+}
+.afwc-referrals-table td.campaign span {
+	color: #9fa6b2;
+}
+.afwc-loader {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+@media only screen and (min-width: 760px) {
+	.afwc-reports tbody {
+		overflow-y: inherit;
+		max-height: none;
+	}
+	.afwc_referrals.afwc-reports thead th:nth-child(1),
+	.afwc_referrals.afwc-reports tbody td:nth-child(1) {
+		width: 25%;
+	}
+	.afwc_referrals.afwc-reports thead th:nth-child(2),
+	.afwc_referrals.afwc-reports tbody td:nth-child(2) {
+		width: 15%;
+	}
+	.afwc_referrals.afwc-reports thead th,
+	.afwc_referrals.afwc-reports tbody td,
+	.afwc_products.afwc-reports thead th:nth-child(1),
+	.afwc_products.afwc-reports tbody td:nth-child(1),
+	.afwc_payout_history.afwc-reports thead th,
+	.afwc_payout_history.afwc-reports tbody td {
+		text-align: left;
+	}
+	.afwc_referrals.afwc-reports thead th:nth-child(3),
+	.afwc_referrals.afwc-reports tbody td:nth-child(3) {
+		text-align: right;
+	}
+	.afwc_payout_history.afwc-reports thead th:nth-child(5),
+	.afwc_payout_history.afwc-reports tbody td:nth-child(5) {
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 760px) {
+	.afwc-affiliate-details-card-wrapper {
+		margin-top: 0.75rem;
+	}
+	#afwc_kpi_section_wrapper .afwc-kpi-row .afwc-kpi-box .afwc-kpi-number {
+		font-size: 1.25rem;
+	}
+	#afwc_kpi_section_wrapper .afwc-kpi-row .afwc-kpi-box .afwc-kpi-title {
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-width: 576px) {
+	#afwc_top_row_container.afwc-top-row-wrapper {
+		flex-direction: column-reverse;
+		align-items: flex-end;
+		gap: 0.5rem;
+	}
+	.afwc-affiliate-details-card-wrapper .afwc-affiliate-details-card {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.afwc-affiliate-details-card-wrapper .afwc-affiliate-details-card .afwc-details {
+		text-align: center;
+	}
+	.afwc-affiliate-details-card-wrapper .afwc-affiliate-details-card .afwc-referral-url-wrapper .afwc-detail-title {
+		display: none;
+	}
+	#afwc_kpi_section_wrapper {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 0;
+	}
+	#afwc_kpi_section_wrapper .afwc-kpi-row {
+		display: contents;
+	}
+	#afwc_kpi_section_wrapper .afwc-kpi-row .afwc-kpi-box {
+		display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+		border-bottom: 0.1rem solid rgba(156, 163, 175, 0.5);
+		padding: 0.15rem 0.5rem;
+	}
+	#afwc_kpi_section_wrapper .afwc-kpi-row .afwc-kpi-box .afwc-kpi-title {
+		margin-top: 0;
+	}
+	#afwc_kpi_section_wrapper .afwc-kpi-row svg.afwc-kpi-separator {
+		display: none;
+	}
+}

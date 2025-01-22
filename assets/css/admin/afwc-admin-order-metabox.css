@@ -1,0 +1,22 @@
+/* phpcs:ignoreFile */
+.options_group.afwc-field .afwc-link-unlink-affiliate-section {
+	margin-bottom: 1.25em;
+}
+.options_group.afwc-field .afwc-link-unlink-affiliate-title {
+	margin: 1em 0;
+}
+.options_group.afwc-field .afwc-field-description {
+	font-style: italic;
+}
+.options_group.afwc-field .afwc-affiliate-search {
+	width: 100%;
+}
+.options_group.afwc-field .afwc-total-commission-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.33em;
+}
+.options_group.afwc-field .afwc-total-commission-title,
+.options_group.afwc-field .afwc-total-commission-description {
+	margin: 0;
+}

@@ -1,0 +1,130 @@
+/* phpcs:ignoreFile */
+ul.subsubsub.documentation {
+	float: right;
+}
+#afwc_storewide_commission {
+	display: none;
+}
+/** registration form CSS Start */
+tr td.afwc_affiliate_registration_form_wrapper {
+	padding-left: 0;
+	padding-top: 0;
+}
+/** registration form > table column heading > tooltip vertically align middle CSS Start */
+table.afwc_registration_form_table.widefat th .afwc-label-tooltip-container {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	gap: 0.3em;
+}
+table.afwc_registration_form_table.widefat th .afwc-label-tooltip-container .woocommerce-help-tip {
+	margin: 0;
+}
+/* registration form > table column heading > tooltip vertically align middle CSS End */
+table.afwc_registration_form_table tr:nth-child(odd) td {
+	background: #f9f9f9;
+}
+table.afwc_registration_form_table td,
+table.afwc_registration_form_table th {
+	display: table-cell;
+	padding: 1em;
+	vertical-align: top;
+	line-height: 1.75em;
+}
+table.afwc_registration_form_table td.name {
+	font-weight: 700;
+	width: 20%;
+}
+tr td.afwc_affiliate_registration_form_wrapper table.afwc_registration_form_table td.value input[type="text"],
+tr td.afwc_affiliate_registration_form_wrapper table.afwc_registration_form_table td.value textarea {
+	width: 100%;
+}
+table.afwc_registration_form_table td.status,
+table.afwc_registration_form_table th.status {
+	text-align: center;
+	width: 10%;
+}
+table.afwc_registration_form_table td.status div.afwc-status-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+table.afwc_registration_form_table td.status span {
+	display: inline-block;
+}
+table.afwc_registration_form_table td.status span.woocommerce-input-toggle {
+	cursor: pointer;
+}
+table.afwc_registration_form_table td.status span.woocommerce-input-toggle:focus-within {
+	outline: 0.25em dashed var(--wp-admin-theme-color);
+}
+table.afwc_registration_form_table td.status span.tips {
+	margin-left: 0.4em;
+}
+table.afwc_registration_form_table td.status span.afwc-status-info {
+	font-size: 1.4em;
+	position: relative;
+	height: 1em;
+	width: 1em;
+}
+table.afwc_registration_form_table td.status span.afwc-status-info::before {
+	font-family: 'WooCommerce';
+	speak: none;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	margin: 0;
+	text-indent: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	content: '\e018';
+	color: var(--wp-admin-theme-color);
+}
+table.afwc_registration_form_table td.status span input[type="radio"] {
+	pointer-events: none;
+}
+/** registration form CSS End */
+.wc-settings-row-afwc-hide, .afwc-hide{
+	display: none !important;
+}
+/** Media uploader CSS Start */
+.afwc-media-uploader{
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	border: 0.07em dashed #c3c4c7;
+	box-sizing: border-box;
+	padding: 0.6em 0;
+	line-height: 1.6;
+	max-width: 20em;
+}
+.afwc-media-uploader:hover,
+.afwc-media-uploader:focus{
+	background: #fff;
+}
+.afwc-media-upload-section button.afwc-media-remove{
+	color: #b32d2e;
+	text-decoration: none;
+	border-color: transparent;
+	box-shadow: none;
+	background: 0 0;
+	line-height: 1.6;
+}
+.afwc-media-upload-section button.afwc-media-remove:focus,
+.afwc-media-upload-section button.afwc-media-remove:hover{
+	background: #b32d2e;
+	color: #fff;
+	border-color: #b32d2e;
+}
+.afwc-media-upload-section .afwc-action-buttons{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+/** Media uploader CSS End */

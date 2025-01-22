@@ -1,0 +1,28 @@
+/* phpcs:ignoreFile */
+@media only screen and (min-width: 760px) {
+	.afwc_payout_history thead th,
+	.afwc_payout_history tbody td {
+		width: 20%;
+	}
+	.afwc_payout_history .invoice {
+		text-align: center;
+	}
+	.afwc_payout_history .print-invoice {
+		display: flex;
+		justify-content: center;
+	}
+}
+.afwc_payout_history td a {
+	cursor: pointer;
+}
+.afwc_payout_history .print-invoice svg {
+    stroke: gray;
+    transition: stroke 0.2s ease;
+}
+.afwc_payout_history .print-invoice:hover svg {
+    stroke: currentColor;
+}
+.afwc_payout_history .print-invoice svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
